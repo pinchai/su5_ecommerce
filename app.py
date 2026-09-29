@@ -12,4 +12,10 @@ def dashboard():
 @app.get("/admin/user")
 def user():
     module = 'user'
-    return render_template('admin/user.html', module=module)
+    return render_template('admin/user/user.html', module=module)
+
+
+@app.get("/admin/user/add")
+def add_user():
+    module = 'user'
+    return render_template('admin/user/add.html', module=module)
