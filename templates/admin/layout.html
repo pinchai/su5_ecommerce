@@ -113,14 +113,14 @@
                         id="navigation"
                 >
                     <li class="nav-item">
-                        <a href="{{ url_for('dashboard') }}" class="nav-link {{ 'active' if  module == 'dashboard' }}">
+                        <a href="{{ url_for('admin_bp.dashboard') }}" class="nav-link {{ 'active' if  module == 'dashboard' }}">
                             <i class="nav-icon bi bi-speedometer2"></i>
                             <p>Dashboard</p>
 
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url_for('user') }}" class="nav-link {{ 'active' if  module == 'user' }}">
+                        <a href="{{ url_for('admin_bp.user') }}" class="nav-link {{ 'active' if  module == 'user' }}">
                             <i class="nav-icon bi bi-people"></i>
                             <p>User</p>
                         </a>

@@ -13,7 +13,7 @@
                     <div class="col-sm-6">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb float-sm-end">
-                                <li class="breadcrumb-item"><a href="{{ url_for('dashboard') }}">Home</a></li>
+                                <li class="breadcrumb-item"><a href="{{ url_for('admin_bp.dashboard') }}">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">User</li>
                             </ol>
                         </nav>
@@ -30,7 +30,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">
-                                    <a href="{{ url_for('add_user') }}" class="btn btn-sm btn-outline-primary">
+                                    <a href="{{ url_for('admin_bp.add_user') }}" class="btn btn-sm btn-outline-primary">
                                         <i class="bi bi-plus-circle"></i>
                                         Add
                                     </a>
@@ -60,10 +60,14 @@
                                             <td>pinchai</td>
                                             <td>admin</td>
                                             <td>
-                                                <button class="btn btn-sm btn-outline-danger"><i
-                                                        class="bi bi-trash"></i></button>
-                                                <button class="btn btn-sm btn-outline-warning"><i
-                                                        class="bi bi-pencil-square"></i></button>
+                                                <a href="{{ url_for('admin_bp.confirm_delete') }}" class="btn btn-sm btn-outline-danger"><i
+                                                        class="bi bi-trash"></i></a>
+                                                <a
+                                                        href="{{ url_for('admin_bp.edit_user') }}"
+                                                        class="btn btn-sm btn-outline-warning"
+                                                >
+                                                    <i class="bi bi-pencil-square"></i>
+                                                </a>
                                             </td>
                                         </tr>
                                         </tbody>

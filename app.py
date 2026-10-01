@@ -1,21 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask
+
+from admin import admin_bp
 
 app = Flask(__name__)
-
-
-@app.get("/admin/dashboard")
-def dashboard():
-    module = 'dashboard'
-    return render_template('admin/dashboard.html', module=module)
-
-
-@app.get("/admin/user")
-def user():
-    module = 'user'
-    return render_template('admin/user/user.html', module=module)
-
-
-@app.get("/admin/user/add")
-def add_user():
-    module = 'user'
-    return render_template('admin/user/add.html', module=module)
+app.register_blueprint(admin_bp, url_prefix='/admin')

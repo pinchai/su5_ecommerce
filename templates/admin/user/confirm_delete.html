@@ -14,7 +14,7 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb float-sm-end">
                                 <li class="breadcrumb-item"><a href="{{ url_for('admin_bp.dashboard') }}">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Add User</li>
+                                <li class="breadcrumb-item active" aria-current="page">Confirm Delete</li>
                             </ol>
                         </nav>
                     </div>
@@ -38,29 +38,17 @@
                             </div>
                             <div class="card-body">
                                 <form method="post" action="#" enctype="multipart/form-data">
-                                    <div class="mb-3">
-                                        <img id="preview_img" style="height: 100px; border-radius: 10px;">
-                                        <hr>
-                                        <input
-                                                type="file"
-                                                class="form-control"
-                                                id="profile"
-                                                onchange="document.getElementById('preview_img').src = window.URL.createObjectURL(this.files[0])"
-                                        >
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="username" class="form-label">Username</label>
-                                        <input type="text" class="form-control" id="username">
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="password" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="password">
-                                    </div>
-
-                                    <button type="reset" class="btn btn-outline-danger">Cancel</button>
-                                    <button type="submit" class="btn btn-outline-primary float-end">Save</button>
+                                    <h3 style="color: red; background-color: yellow">Do You Want To Delete ?</h3>
+                                    <ul>
+                                        <li>Username: admin</li>
+                                        <li>Role: admin</li>
+                                    </ul>
+                                    <button
+                                            type="submit"
+                                            class="btn btn-outline-danger float-end"
+                                    >
+                                        Yes Delete
+                                    </button>
                                 </form>
                             </div>
                         </div>
